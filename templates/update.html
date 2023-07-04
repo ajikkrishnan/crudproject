@@ -1,0 +1,17 @@
+<div class="container">
+
+<form method="POST" action="{% url 'update' crud2.id %}">
+    {% csrf_token %}
+    <label for="si">SL No:</label>
+    <input type="text" name="si" value="{{crud2.si}}" required><br>
+  
+    <label for="item">Item Name:</label>
+    <input type="text" name="item" value="{{crud2.item}}" required><br>
+  
+    <label for="desc">Description:</label>
+    <textarea name="desc" required>{{crud2.desc}}</textarea><br>
+  
+    <input type="submit" value="Update">
+  </form>
+
+  </div>
